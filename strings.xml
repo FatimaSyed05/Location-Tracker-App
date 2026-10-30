@@ -1,0 +1,10 @@
+<resources> 
+    <string name="app_name" translatable="false">Location tracker</string> 
+    <string name="open_drawer" translatable="false">Open navigation 
+drawer</string> 
+    <string name="close_drawer" translatable="false">Close navigation 
+drawer</string> 
+    <string name="logout" translatable="false">Logout</string> 
+    <string name="share" translatable="false">Share</string> 
+ 
+</resources>

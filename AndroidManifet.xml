@@ -1,0 +1,71 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:tools="http://schemas.android.com/tools" 
+    package="com.locationtracker"> 
+    <!-- Permissions --> 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" 
+/> 
+    <uses-permission 
+android:name="android.permission.ACCESS_COARSE_LOCATION" /> 
+    <uses-permission android:name="android.permission.INTERNET" /> 
+    <uses-permission 
+android:name="android.permission.ACCESS_NETWORK_STATE" /> 
+    <uses-permission 
+android:name="android.permission.ACCESS_BACKGROUND_LOCATION" /> 
+ 
+    <application 
+        android:allowBackup="true" 
+        android:icon="@drawable/icon" 
+        android:label="@string/app_name" 
+        android:roundIcon="@drawable/ic_launcher_background" 
+        android:supportsRtl="true" 
+        android:theme="@style/Theme.LocationTracker" 
+        android:usesCleartextTraffic="true"> 
+        <activity 
+            android:name="com.example.locationtracker.ThirdActivity" 
+            android:exported="true" > 
+            <intent-filter 
+                android:label="Open location in LocationTracker"> 
+                <action android:name="android.intent.action.VIEW" /> 
+                <category android:name="android.intent.category.DEFAULT" /> 
+                <category android:name="android.intent.category.BROWSABLE" /> 
+ 
+                <!-- For both http and https schemes with maps.google.com --> 
+                <data android:scheme="https" android:host="maps.google.com" /> 
+                <data android:scheme="http" android:host="maps.google.com" /> 
+ 
+                <!-- For links starting with https://www.google.com/maps --> 
+                <data android:scheme="https" android:host="www.google.com" 
+android:pathPrefix="/maps" /> 
+ 
+                <!-- For Google shortened links --> 
+                <data android:scheme="https" android:host="maps.app.goo.gl" /> 
+            </intent-filter> 
+ 
+        </activity> 
+ 
+        <!-- Google Maps API Key --> 
+        <meta-data 
+            android:name="com.google.android.geo.API_KEY" 
+            android:value="@string/google_maps_key" /> 
+ 
+        <!-- Activities --> 
+        <activity 
+            android:name=".Drawer_menuActivity" 
+            android:exported="false" /> 
+        <activity 
+            android:name=".Drawer_header" 
+            android:exported="false" /> 
+        <activity 
+            android:name="com.example.locationtracker.SecondActivity" 
+            android:exported="false" 
+            tools:ignore="ExtraText,MissingClass"/> 
+        <activity 
+            android:name="com.example.locationtracker.MainActivity" 
+            android:exported="true"> 
+            <intent-filter> 
+                <action android:name="android.intent.action.MAIN" /> 
+                <category android:name="android.intent.category.LAUNCHER" /> 
+            </intent-filter> 
+        </activity> 
+    </application> 
+</manifest>

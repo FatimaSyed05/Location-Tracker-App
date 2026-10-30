@@ -1,0 +1,72 @@
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:tools="http://schemas.android.com/tools" 
+    android:layout_width="match_parent" 
+    android:layout_height="match_parent" 
+    android:padding="52dp" 
+    android:gravity="center" 
+    tools:ignore="ExtraText"> 
+    <!-- Title --> 
+    <TextView 
+        android:id="@+id/tvTitle" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:text="Location Tracker" 
+        android:textSize="24sp" 
+        android:textStyle="bold" 
+        android:layout_centerHorizontal="true" 
+        android:layout_marginBottom="40dp" 
+        android:layout_alignParentTop="true"/> 
+ 
+    <!-- Email Field --> 
+    <EditText 
+        android:id="@+id/etEmail" 
+        android:layout_width="match_parent" 
+        android:layout_height="48dp" 
+        android:hint="Enter your email" 
+        android:inputType="textEmailAddress" 
+        android:layout_below="@id/tvTitle" 
+        android:layout_marginTop="40dp"/> 
+ 
+    <!-- Password Field with Eye Icon --> 
+    <RelativeLayout 
+        android:id="@+id/passwordContainer" 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content" 
+        android:layout_below="@id/etEmail" 
+        android:layout_marginTop="24dp"> 
+ 
+        <EditText 
+            android:id="@+id/etPassword" 
+            android:layout_width="match_parent" 
+            android:layout_height="48dp" 
+            android:hint="Password" 
+            android:inputType="textPassword" 
+            android:paddingEnd="48dp"/> 
+ 
+        <ImageView 
+            android:id="@+id/ivTogglePassword" 
+            android:layout_width="24dp" 
+            android:layout_height="24dp" 
+            android:layout_alignParentEnd="true" 
+            android:layout_centerVertical="true" 
+            android:layout_marginEnd="12dp" 
+            android:src="@drawable/eye_hidden" 
+            android:contentDescription="Toggle password visibility"/> 
+    </RelativeLayout> 
+ 
+    <!-- Login Button --> 
+    <Button 
+        android:id="@+id/btnLogin" 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content" 
+        android:text="Login" 
+        android:layout_below="@id/passwordContainer" 
+        android:layout_marginTop="40dp"/> 
+    <Button 
+        android:id="@+id/signupButton" 
+        android:text="Sign Up" 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content" 
+        android:layout_below="@id/btnLogin"/> 
+</RelativeLayout>
